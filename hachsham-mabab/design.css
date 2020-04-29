@@ -1,0 +1,892 @@
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+
+@-ms-viewport {
+    width: device-width ;
+}
+
+@-webkit-viewport {
+    width: device-width ;
+}
+
+/* code that is here, until the first @media block, will apply to any screen size */
+@font-face{
+    font-family: Assistant;
+    src: url("Assistant-Regular.ttf");
+}
+
+@font-face{
+    font-family: VarelaRound;
+    src: url("VarelaRound-Regular.ttf");
+}
+
+body{
+    position: absolute;
+    top: 0vh;
+    width: 100%;
+    height: 100%;
+    margin: 0vh;
+    overflow-y: hidden;
+    background-color: #DEDFDA;
+    font-family: VarelaRound;
+    touch-action: manipulation;
+    
+}
+
+.grayScreen{
+    background-color: rgba(88, 88, 88, 0.7);
+    height: 100vh;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+}
+
+.feedBackBox{
+    direction: rtl;
+    border-radius: 3vh;
+    position: absolute;
+    z-index: 2;
+    padding: 3vh;
+}
+
+.backBtn{
+    background-color: black;
+    border-radius: 1.5vh;
+    color: white;
+    border: 0vw;
+    padding: 2vw;
+}
+
+.title{
+    color: black;
+    position: absolute;
+    direction: rtl;
+    text-align: center;
+    z-index: -1;
+    font-weight: 1000;
+}
+
+#score{
+    color: gray;
+    text-align: center;
+    font-size: 4vw;
+}
+
+#boardArea{
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.packman{
+    position: relative;
+    z-index: -1;
+}
+
+.allRow{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rows{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.arrow{
+    cursor: pointer;
+}
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+}
+
+.horizontal{
+    position: absolute;
+}
+
+#n37{
+    transform: rotate(180deg);
+}
+
+#n38{
+    transform: rotate(-90deg);
+}
+
+#n40{
+    transform: rotate(90deg);
+}
+
+.questionsArea{
+    background-color: rgba(255, 255, 255, 0.762);
+    direction: rtl;
+    border-radius: 3vh;
+    position: absolute;
+    z-index: 1;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-top: 2vh;
+}
+
+.answers{
+    direction: rtl;
+}
+
+input{
+    float: right;
+    text-align: left;
+}
+
+span{
+    float: left;
+    text-align: right;
+}
+
+.subjectTitle{
+    text-align: center;
+    font-weight: bold;
+    font-style: underline;
+}
+
+.quesionTitle{
+    font-weight: bolder;
+}
+
+.submitBtn{
+    float: left;
+    margin-bottom: 4vh;
+    margin-left: 2vw;
+    border: none;
+    color: black;
+    background-color: cornflowerblue;
+    border-radius: 2vh;
+    font-family: VarelaRound;
+    padding: 1vw;
+}
+
+.start-over{
+    color: black;
+    position: absolute;
+    top: 50vh;
+    right: 14.5vw;
+    font-size: 4vw;
+    cursor: pointer;
+}
+
+.end-message{
+    color: rgb(225, 225, 121);
+    font-size: 6vw;
+    position: absolute;
+    left: 16vw;
+    top: 32vh;
+    background: aqua;
+    z-index: 1;
+}
+
+.finalScore{
+    position: absolute;      
+    direction: rtl;
+}
+
+.credits{
+    position: absolute;
+
+}
+  
+ /*Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 780px) {
+    #boardArea{
+        width: 65vw;
+        height: 70vh;
+        left: 17vw;
+        top: 12vh;
+    } 
+
+    .imgBack{
+        width: 20vw;
+        height: 21vh;
+        position: absolute;
+        top: 79vh;
+        left: 79vw;
+        z-index: -1;
+    }
+
+    .title{
+        font-size: 7vw;
+        top: 1vh;
+        right: 30vw;
+    }
+
+    #score{
+        position: absolute;
+        top: 85vh;
+        left: 12vw;
+        font-size: 5vw;
+    }
+
+    .packman{
+        width: 6.5vw;
+        height: 7vh;
+        left: 29vw;
+        top: 26vh;
+    }
+
+    .space{
+        width: 1vw;
+        height: 1.5vh;
+    }
+
+    .rows{
+        width: 65vw;
+        height: 70vh;
+        left: 0vw;
+        top: 0vh;
+    }
+
+    .arrow{
+        width: 5vw;
+        height: 5.5vh;
+    }
+
+    .vertical{
+        top: 83.5vh;
+        left: 51vw;
+    }
+
+    .horizontal{
+        top: 87.5vh;
+        left: 38.4vw;
+    }
+
+    .allRow{
+        width: 65vw;
+        left: 3vw;
+    }
+    
+    .food{
+        width: 2vw;
+        height: 2vh;
+    }
+
+    .question{
+        width: 2vw;
+        height: 2vh;
+    }
+
+    .questionsArea{
+        width: 75vw;
+        top: 8vh;
+        left: 11vw;
+        font-size: 3.8vw;
+    }
+
+    .subjectTitle{
+        font-size: 5.5vw;
+    }
+
+    .feedBackBox{
+        font-size: 4vw;
+        width: 45vw;
+        top: 18vh;
+        left: 26vw;
+        text-align: center;
+    }
+
+    .backBtn{
+        font-size: 3vw;
+        margin-top: 2vh;
+        font-family: VarelaRound;
+    }
+
+    .submitBtn{
+        font-size: 3vw;
+    }
+
+    #n37{
+        padding-left: 3vw;
+        padding-right: 8vw;
+    }
+    
+    #n38{
+        margin-bottom: 3vh;
+    }
+    
+    #n40{
+        margin-bottom: 2vh;
+    }
+
+    .congrats{
+        font-size: 12vw;
+        top: 10vh;
+        text-align: center;
+        color: #96281b;
+        font-weight: bold;
+    }
+
+    .finalScore{
+        top: 40vh;
+        left: 17vw;
+        font-size: 7vw;
+    }
+
+    .credits{
+        top: 84vh;
+        left: 4vw;
+        font-size: 4vw;
+    }
+}
+
+/* Extra small devices landscape (phones, 600px and down) */
+@media only screen and (max-width: 736px) {
+    #boardArea{
+        width: 50vw;
+        height: 85vh;
+        left: 5vw;
+        top: 13vh;
+    } 
+
+    .imgBack{
+        width: 37vw;
+        height: 66vh;
+        position: absolute;
+        top: 34vh;
+        left: 59vw;
+        z-index: -1;
+    }
+
+    .title{
+        font-size: 4.5vw;
+        top: 0vh;
+        right: 2vw;
+    }
+
+    .packman{
+        width: 3.5vw;
+        height: 8vh;
+        left: 23vw;
+        top: 31vh;
+    }
+
+    #score{
+        position: absolute;
+        top: 0vh;
+        left: 15vw;
+        font-size: 4vw;
+    }
+
+    .space{
+        width: 2vw;
+        height: 3vh;
+    }
+
+    .arrow{
+        width: 5vw;
+        height: 9vh;
+    }
+
+    .rows{
+        width: 50vw;
+        height: 85vh;
+        top: 0vh;
+        left: 0vw;
+    }
+
+    .vertical{
+        top: 20vh;
+        left: 60vw;
+    }
+
+    .horizontal{
+        top: 26.5vh;
+        left: 48.4vw;
+    }
+
+    .allRow{
+        width: 50vw;
+        left: 1.5vw;
+    }
+    
+    .food{
+        width: 2vw;
+        height: 3vh;
+    }
+
+    .question{
+        width: 2vw;
+        height: 3vh;
+    }
+
+    .questionsArea{
+        width: 75vw;
+        top: 8vh;
+        left: 11vw;
+    }
+
+    .subjectTitle{
+        font-size: 3.5vw;
+    }
+
+    .feedBackBox{
+        font-size: 4vw;
+        width: 45vw;
+        top: 20vh;
+        left: 27vw;
+        text-align: center;
+    }
+
+    .backBtn{
+        font-size: 3vw;
+        margin-top: 2vh;
+        font-family: VarelaRound;
+    }
+
+    .submitBtn{
+        font-size: 2.5vw;
+    }
+
+    #n37{
+        transform: rotate(180deg);
+        padding-left: 2vw;
+        padding-right: 8vw;
+    }
+    
+    #n38{
+        transform: rotate(-90deg);
+        margin-bottom: 4vh;
+    }
+    
+    #n40{
+        transform: rotate(90deg);
+        margin-bottom: 3vh;
+    }
+
+    .congrats{
+        font-size: 7vw;
+        top: 10vh;
+        text-align: center;
+        color: #96281b;
+        font-weight: bold;
+    }
+
+    .finalScore{
+        top: 40vh;
+        left: 14vw;
+        font-size: 3.5vw;
+    }
+
+    .credits{
+        top: 75vh;
+        left: 3vw;
+        font-size: 2.5vw;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 440px) {
+    #boardArea{
+        width: 75vw;
+        height: 63vh;
+        left: 13vw;
+        top: 12vh;
+    } 
+
+    .packman{
+        width: 7vw;
+        height: 6.5vh;
+        left: 33vw;
+        top: 23vh;
+    }
+
+    .title{
+        font-size: 8vw;
+        top: 0vh;
+        left: 14vw;
+        text-align: center;
+        width: 70vw;
+    }
+
+    .arrow{
+        width: 5vw;
+        height: 5vh;
+    }
+
+    #score{
+        position: absolute;
+        top: 90vh;
+        left: 10vw;
+        font-size: 5vw;
+    }
+
+    .imgBack{
+        width: 30vw;
+        height: 23vh;
+        position: absolute;
+        top: 77vh;
+        left: 66vw;
+        z-index: -1;
+    }
+
+    .space{
+        width: 2vw;
+        height: 1.5vh;
+    }
+
+    .rows{
+        width: 73vw;
+        height: 63vh;
+        left: 0vw;
+        top: 0vh;
+    }
+
+    .vertical{
+        top: 78vh;
+        left: 48vw;
+    }
+
+    .horizontal{
+        top: 83.5vh;
+        left: 35.5vw;
+    }
+
+    .allRow{
+        width: 73vw;
+        left: 1.5vw;
+    }
+    
+    .food{
+        width: 2vw;
+        height: 1.5vh;
+    }
+
+    .question{
+        width: 2vw;
+        height: 1.5vh;
+    }
+
+    #n37{
+        padding-left: 7vw;
+        padding-right: 6vw;
+    }
+    
+    #n38{
+        margin-top: 1vh;
+    }
+
+    .questionsArea{
+        width: 75vw;
+        top: 8vh;
+        left: 11vw;
+        font-size: 5vw;
+    }
+
+    .subjectTitle{
+        font-size: 6vw;
+    }
+
+    .feedBackBox{
+        font-size: 6vw;
+        width: 45vw;
+        top: 17vh;
+        left: 23vw;
+        text-align: center;
+    }
+
+    .backBtn{
+        font-size: 4.5vw;
+        margin-top: 2vh;
+        font-family: VarelaRound;
+    }
+
+    .submitBtn{
+        font-size: 4.5vw;
+        padding: 2vw;
+    }
+
+    .congrats{
+        font-size: 12vw;
+        top: 10vh;
+        text-align: center;
+        color: #96281b;
+        font-weight: bold;
+    }
+
+    .finalScore{
+        top: 40vh;
+        left: 1vw;
+        width: 82vw;
+        font-size: 7vw;
+    }
+
+    .credits{
+        top: 85vh;
+        left: 3vw;
+        font-size: 4.5vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #boardArea{
+        width: 70vw;
+        height: 75vh;
+        left: 4vw;
+        top: 23vh;
+    }
+
+    .title{
+        font-size: 7.5vw;
+        top: 1vh;
+        right: 5vw;
+    }
+
+    .imgBack{
+        width: 18vw;
+        height: 20vh;
+        position: absolute;
+        top: 4vh;
+        left: 8vw;
+        z-index: -1;
+    }
+
+    #score{
+        position: absolute;
+        top: 14vh;
+        left: 55vw;
+        font-size: 4vw;
+    }
+
+    .packman{
+        width: 6vw;
+        height: 7vh;
+        left: 32vw;
+        top: 28vh;
+    }
+    
+    .space{
+        width: 1vw;
+        height: 1.5vh;
+    }
+    
+    .food{
+        width: 1vw;
+        height: 1.5vh;
+    }
+
+    .question{
+        width: 1vw;
+        height: 1.5vh;
+    }
+
+    .rows{
+        width: 70vw;
+        height: 75vh;
+    }
+
+    .allRow{
+        width: 70vw;
+        left: 3vw;
+    }
+
+    .arrow{
+        height: 5vh;
+        width: 5vw;
+    }
+
+    .vertical{
+        top: 40vh;
+        left: 80vw;
+    }
+
+    .horizontal{
+        top: 44.5vh;
+        left: 67.5vw;
+    }
+
+    .questionsArea{
+        width: 75vw;
+        top: 8vh;
+        left: 11vw;
+        font-size: 2.5vw;
+    }
+
+    .subjectTitle{
+        font-size: 4vw;
+    }
+
+    .feedBackBox{
+        font-size: 3vw;
+        width: 40vw;
+        top: 20vh;
+        left: 27vw;
+        text-align: center;
+    }
+
+    .backBtn{
+        font-size: 2.5vw;
+        margin-top: 2vh;
+        padding: 1vw;
+        font-family: VarelaRound;
+    }
+
+    .submitBtn{
+        font-size: 2.5vw;
+    }
+
+    #n37{
+        padding-left: 4vw;
+        padding-right: 8vw;
+    }
+    
+    #n38{
+        margin-bottom: 4vh;
+    }
+    
+    #n40{
+        margin-bottom: 2vh;
+    }
+
+    .congrats{
+        font-size: 10vw;
+        top: 10vh;
+        text-align: center;
+        color: #96281b;
+        font-weight: bold;
+    }
+
+    .finalScore{
+        top: 45vh;
+        right: 38vw;
+        width: 82vw;
+        font-size: 4vw;
+    }
+
+    .credits{
+        top: 78vh;
+        left: 3vw;
+        font-size: 3vw;
+    }
+} 
+
+/*Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #boardArea{
+        width: 52vw;
+        height: 77vh;
+        left: 5vw;
+        top: 20vh;
+    }
+
+    #score{
+        position: absolute;
+        top: 7vh;
+        left: 10vw;
+    }   
+
+    .title{
+        font-size: 7vw;
+        top: 0vh;
+        right: 5vw;
+    }
+
+    .packman{
+        width: 5vw;
+        height: 7vh;
+        left: 23.5vw;
+        top: 28.5vh;
+    }
+
+    .imgBack{
+        width: 40vw;
+        height: 60vh;
+        position: absolute;
+        top: 40vh;
+        left: 60vw;
+        z-index: -1;
+    }
+    
+    .space{
+        width: 1vw;
+        height: 1.5vh;
+    }
+    
+    .food{
+        width: 1vw;
+        height: 1.5vh;
+    }
+
+    .question{
+        width: 1vw;
+        height: 1.5vh;
+    }
+
+    .rows{
+        width: 52vw;
+        height: 77vh;
+        left: 0vw;
+        top: 0vh;
+    }
+
+    .allRow{
+        width: 52vw;
+        left: 1.5vw;
+    }
+
+    .arrow{
+        width: 4vw;
+        height: 7.5vh;
+    }
+
+    .vertical{
+        top: 24.7vh;
+        left: 65vw;
+    }
+
+    .horizontal{
+        top: 30vh;
+        left: 53.4vw;
+    }
+
+    #n37{
+        transform: rotate(180deg);
+        padding-left: 3vw;
+        padding-right: 8vw;
+    }
+    
+    #n38{
+        transform: rotate(-90deg);
+        margin-bottom: 4vh;
+    }
+    
+    #n40{
+        transform: rotate(90deg);
+        margin-bottom: 2vh;
+    }
+
+    .congrats{
+        font-size: 8vw;
+        top: 10vh;
+        text-align: center;
+        color: #96281b;
+        font-weight: bold;
+    }
+
+    .finalScore{
+        top: 30vh;
+        right: 35vw;
+        width: 82vw;
+        font-size: 4vw;
+    }
+
+    .credits{
+        top: 70vh;
+        left: 3vw;
+        font-size: 3vw;
+    }
+}
